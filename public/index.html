@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PANN OSINT Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="dot"></span>
+      <h1>PANN<span>OSINT</span></h1>
+    </div>
+    <nav>
+      <a href="#" data-tool="dashboard" class="active">Dashboard</a>
+      <a href="#" data-tool="email">Email OSINT</a>
+      <a href="#" data-tool="google">Google Account</a>
+      <a href="#" data-tool="username">Username Enum</a>
+      <a href="#" data-tool="phone">Phone Intel</a>
+      <a href="#" data-tool="ip">IP Lookup</a>
+      <a href="#" data-tool="domain">Domain Intel</a>
+      <a href="#" data-tool="breach">Breach Check</a>
+      <a href="#" data-tool="social">Social Finder</a>
+    </nav>
+    <div class="footer">
+      <small>PANN OSINT · by ENI</small>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <h2 id="tool-title">Dashboard</h2>
+      <span class="status">● online</span>
+    </header>
+    <section id="tool-area" class="tool-area"></section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0a0e14;
+  color: #d5dbe3;
+  min-height: 100vh;
+}
+
+.app { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 240px;
+  background: #0f141c;
+  border-right: 1px solid #1a2230;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid #1a2230;
+  margin-bottom: 12px;
+}
+.brand .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #4ade80; box-shadow: 0 0 10px #4ade80;
+}
+.brand h1 {
+  font-size: 16px; font-weight: 700; color: #f0f3f7;
+}
+.brand h1 span { color: #4ade80; }
+
+nav { display: flex; flex-direction: column; padding: 0 12px; flex: 1; }
+nav a {
+  padding: 10px 14px; border-radius: 8px; color: #8b96a8;
+  text-decoration: none; font-size: 13.5px; font-weight: 500;
+  margin-bottom: 2px; transition: 0.15s;
+}
+nav a:hover { background: #161d29; color: #d5dbe3; }
+nav a.active { background: #1a2433; color: #4ade80; }
+
+.footer {
+  padding: 12px 20px; border-top: 1px solid #1a2230;
+  color: #4b5563; font-size: 11px;
+}
+
+.main { flex: 1; display: flex; flex-direction: column; }
+
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 28px; border-bottom: 1px solid #1a2230;
+  background: #0d121a;
+}
+.topbar h2 { font-size: 18px; font-weight: 600; color: #f0f3f7; }
+.status { font-size: 12px; color: #4ade80; }
+
+.tool-area { padding: 24px 28px; flex: 1; }
+
+.form-group { margin-bottom: 14px; }
+.form-group label {
+  display: block; font-size: 12px; color: #8b96a8;
+  margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%; padding: 10px 12px; background: #0f141c;
+  border: 1px solid #1e2836; border-radius: 8px;
+  color: #d5dbe3; font-family: inherit; font-size: 13.5px;
+  transition: 0.15s;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  outline: none; border-color: #4ade80;
+}
+.form-group textarea { min-height: 100px; resize: vertical; font-family: monospace; }
+
+button {
+  padding: 11px 22px; background: #4ade80; color: #0a0e14;
+  border: none; border-radius: 8px; font-weight: 700;
+  cursor: pointer; font-size: 13.5px; transition: 0.15s;
+}
+button:hover { background: #22c55e; transform: translateY(-1px); }
+button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+.result {
+  margin-top: 18px; background: #0f141c; border: 1px solid #1e2836;
+  border-radius: 8px; padding: 16px;
+  font-family: "JetBrains Mono", monospace; font-size: 12.5px;
+  white-space: pre-wrap; word-break: break-all;
+  max-height: 600px; overflow-y: auto;
+  color: #a3e635;
+}
+
+.card {
+  background: #0f141c; border: 1px solid #1e2836;
+  border-radius: 12px; padding: 22px; margin-bottom: 20px;
+}
+.card h3 {
+  font-size: 15px; color: #f0f3f7; margin-bottom: 16px;
+  padding-bottom: 12px; border-bottom: 1px solid #1e2836;
+}
+
+.dash-grid {
+  display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 16px;
+}
+.dash-card {
+  background: linear-gradient(135deg, #101724 0%, #0c121b 100%);
+  border: 1px solid #1e2836; border-radius: 12px; padding: 20px;
+}
+.dash-card h4 { font-size: 12px; color: #8b96a8; text-transform: uppercase; margin-bottom: 8px; }
+.dash-card .num { font-size: 28px; font-weight: 700; color: #4ade80; }
+
+.links { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.links a {
+  display: block; padding: 10px 14px; background: #161d29;
+  border-radius: 8px; color: #d5dbe3; text-decoration: none;
+  font-size: 13px; transition: 0.15s;
+}
+.links a:hover { background: #1e2836; color: #4ade80; }
+
+.found {
+  display: inline-block; padding: 4px 10px; border-radius: 6px;
+  background: #1a2433; color: #4ade80; font-size: 12px;
+  margin: 3px 3px 3px 0; text-decoration: none;
+}
+.found:hover { background: #22c55e; color: #0a0e14; }
